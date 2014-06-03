@@ -1,7 +1,7 @@
 <?php
 /**
- * GenesisAwesome Child Theme Settings 
- * 
+ * GenesisAwesome Child Theme Settings
+ *
  * @package    Genesis Child Theme
  * @subpackage Admin
  * @author     Harish Dasari
@@ -11,7 +11,7 @@
 
 /**
  * GenesisAwesome Childtheme Settings Class
- * 
+ *
  * @since 1.0
  */
 class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
@@ -57,40 +57,38 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 			'recaptcha_colortheme'      => 'red',
 			'enable_homepage_slider'    => 1,
 			'homepage_slider_category'  => '',
-			'homepage_slider_number'    => '5',
-			'rssfeed_url'               => '',
-			'facebook_url'              => '',
-			'twitter_url'               => '',
-			'linkedin_url'              => '',
-			'googleplus_url'            => '',
-			'stumbleupon_url'           => '',
-			'pinterest_url'             => '',
-			'enable_ga_typography'      => 0,
+			'homepage_slider_number'    => 5,
+
+			'twitter_url'               => '#',
+			'facebook_url'              => '#',
+			'linkedin_url'              => '#',
+			'pinterest_url'             => '#',
+			'googleplus_url'            => '#',
+			'instagram_url'             => '#',
+			'youtube_url'               => '#',
+			'stumbleupon_url'           => '#',
+			'flickr_url'                => '#',
+
 			'ga_font_size'              => '',
 			'ga_font_color'             => '',
 			'ga_link_color'             => '',
 			'ga_link_hover_color'       => '',
-			'enable_ga_h1_typography'   => 0,
 			'ga_h1_font_size'           => '',
 			'ga_h1_font_color'          => '',
 			'ga_h1_link_color'          => '',
 			'ga_h1_link_hover_color'    => '',
-			'enable_ga_h2_typography'   => 0,
 			'ga_h2_font_size'           => '',
 			'ga_h2_font_color'          => '',
 			'ga_h2_link_color'          => '',
 			'ga_h2_link_hover_color'    => '',
-			'enable_ga_h3_typography'   => 0,
 			'ga_h3_font_size'           => '',
 			'ga_h3_font_color'          => '',
 			'ga_h3_link_color'          => '',
 			'ga_h3_link_hover_color'    => '',
-			'enable_ga_h4_typography'   => 0,
 			'ga_h4_font_size'           => '',
 			'ga_h4_font_color'          => '',
 			'ga_h4_link_color'          => '',
 			'ga_h4_link_hover_color'    => '',
-			'enable_ga_h5_typography'   => 0,
 			'ga_h5_font_size'           => '',
 			'ga_h5_font_color'          => '',
 			'ga_h5_link_color'          => '',
@@ -107,7 +105,7 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 
 	/**
 	 * Options Filters for Genesisawesome
-	 * 
+	 *
 	 * @return null
 	 */
 	public function genesisawesome_childtheme_filters() {
@@ -120,12 +118,6 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 				'enable_post_social_share',
 				'enable_post_subscribe_box',
 				'enable_post_related_posts',
-				'enable_ga_typography',
-				'enable_ga_h1_typography',
-				'enable_ga_h2_typography',
-				'enable_ga_h3_typography',
-				'enable_ga_h4_typography',
-				'enable_ga_h5_typography',
 			)
 		);
 
@@ -133,20 +125,10 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 			'no_html',
 			$this->settings_field,
 			array(
-				'logo_url',
 				'feedburner_id',
 				'recaptcha_publickey',
 				'recaptcha_privatekey',
 				'recaptcha_colortheme',
-				'rssfeed_url',
-				'facebook_url',
-				'twitter_url',
-				'dribbble_url',
-				'linkedin_url',
-				'googleplus_url',
-				'stumbleupon_url',
-				'pinterest_url',
-				'youtube_url',
 				'ga_font_color',
 				'ga_link_color',
 				'ga_link_hover_color',
@@ -177,6 +159,23 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 		);
 
 		genesis_add_option_filter(
+			'url',
+			$this->settings_field,
+			array(
+				'logo_url',
+				'twitter_url',
+				'facebook_url',
+				'linkedin_url',
+				'pinterest_url',
+				'googleplus_url',
+				'instagram_url',
+				'youtube_url',
+				'stumbleupon_url',
+				'flickr_url',
+			)
+		);
+
+		genesis_add_option_filter(
 			'email',
 			$this->settings_field,
 			array(
@@ -185,7 +184,7 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 		);
 
 		genesis_add_option_filter(
-			'integer',
+			'absint',
 			$this->settings_field,
 			array(
 				'logo_width',
@@ -205,58 +204,26 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 
 	/**
 	 * Register Metaboxes
-	 * 
+	 *
 	 * Registers the metaboxes for GenesisAwesome Child Theme Options page.
-	 * 
+	 *
 	 * @return null
 	 */
 	function metaboxes() {
 
-		add_meta_box( 'genesisawesome-childtheme-info', __( 'Theme Information', 'genesisawesome' ), array( $this, 'childtheme_info' ), $this->pagehook, 'main', 'high' );
 		add_meta_box( 'genesisawesome-general-settings', __( 'General Settings', 'genesisawesome' ), array( $this, 'general_settings' ), $this->pagehook, 'main', 'high' );
 		add_meta_box( 'genesisawesome-social-settings', __( 'Social Settings', 'genesisawesome' ), array( $this, 'social_settings' ), $this->pagehook, 'main', 'high' );
 		add_meta_box( 'genesisawesome-slider-settings', __( 'Homepage Slider Settings', 'genesisawesome' ), array( $this, 'homepage_slider_settings' ), $this->pagehook, 'main', 'high' );
 		add_meta_box( 'genesisawesome-contact-settings', __( 'Contact Page Settings', 'genesisawesome' ), array( $this, 'contact_page_settings' ), $this->pagehook, 'main', 'high' );
 		add_meta_box( 'genesisawesome-typography-settings', __( 'Typography Settings', 'genesisawesome' ), array( $this, 'typography_settings' ), $this->pagehook, 'main', 'high' );
-
-	}
-
-	/**
-	 * Child Theme Information 
-	 * 
-	 * @return null
-	 */
-	function childtheme_info() {
-
-		?>
-		<table class="form-table">
-			<tr>
-				<td><?php _e( 'Theme Name', 'genesisawesome' );?></td>
-				<td> : <strong><a href="<?php echo esc_url( CHILD_THEME_URL ); ?>" target="_blank"><?php esc_html_e( CHILD_THEME_NAME ); ?></a></strong></td>
-			</tr>
-			<tr>
-				<td><?php _e( 'Theme Version', 'genesisawesome' );?></td>
-				<td> : v<?php esc_html_e( CHILD_THEME_VER ); ?></td>
-			</tr>
-			<tr>
-				<td><?php _e( 'Author', 'genesisawesome' );?></td>
-				<td> : <strong>Harish Dasari</strong> / <a href="http://www.genesisawesome.com/" target="_blank">GenesisAwesome</a></td>
-			</tr>
-			<tr align="center">
-				<td colspan="2">
-					<a href="http://www.genesisawesome.com/donate/" title="Donate" target="_blank"><img src="http://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="" /></a>
-					<div>Your Donation will be used to future release of Free Child Themes :). Thank You! <div style="text-align:right;">-- <a href="http://about.me/harishdasari" target="_blank">Harish Dasari</a></div></div>
-				</td>
-			</tr>
-		</table>
-		<?php
+		add_meta_box( 'genesisawesome-childtheme-info', __( 'Theme Information', 'genesisawesome' ), array( $this, 'childtheme_info' ), $this->pagehook, 'main', 'high' );
 
 	}
 
 	/**
 	 * General Settings Box
-	 * 
-	 * @return null 
+	 *
+	 * @return null
 	 */
 	function general_settings() {
 
@@ -305,36 +272,30 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function social_settings() {
 
+		$socials = array(
+			'twitter_url'     => __( 'Twitter', 'genesisawesome' ),
+			'facebook_url'    => __( 'Facebook', 'genesisawesome' ),
+			'linkedin_url'    => __( 'LinkedIn', 'genesisawesome' ),
+			'pinterest_url'   => __( 'Pinterest', 'genesisawesome' ),
+			'googleplus_url'  => __( 'Google Plus', 'genesisawesome' ),
+			'instagram_url'   => __( 'Instagram', 'genesisawesome' ),
+			'youtube_url'     => __( 'Youtube', 'genesisawesome' ),
+			'stumbleupon_url' => __( 'Stumbleupon', 'genesisawesome' ),
+			'flickr_url'      => __( 'Flickr', 'genesisawesome' ),
+		);
+
 		?>
 		<table class="form-table">
-			<tr valign="top">
-				<th scope="row"><label for="<?php echo $this->get_field_id( 'rssfeed_url' ); ?>"><?php _e( 'Rss Feed URL', 'genesisawesome' ) ?></label></th>
-				<td><input type="text" name="<?php echo $this->get_field_name( 'rssfeed_url' ); ?>" id="<?php echo $this->get_field_id( 'rssfeed_url' ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'rssfeed_url' ) ); ?>" class="widefat" /></td>
-			</tr>
-			<tr valign="top">
-				<th scope="row"><label for="<?php echo $this->get_field_id( 'facebook_url' ); ?>"><?php _e( 'Facebook URL', 'genesisawesome' ) ?></label></th>
-				<td><input type="text" name="<?php echo $this->get_field_name( 'facebook_url' ); ?>" id="<?php echo $this->get_field_id( 'facebook_url' ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'facebook_url' ) ); ?>" class="widefat" /></td>
-			</tr>
-			<tr valign="top">
-				<th scope="row"><label for="<?php echo $this->get_field_id( 'twitter_url' ); ?>"><?php _e( 'Twitter URL', 'genesisawesome' ) ?></label></th>
-				<td><input type="text" name="<?php echo $this->get_field_name( 'twitter_url' ); ?>" id="<?php echo $this->get_field_id( 'twitter_url' ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'twitter_url' ) ); ?>" class="widefat" /></td>
-			</tr>
-			<tr valign="top">
-				<th scope="row"><label for="<?php echo $this->get_field_id( 'linkedin_url' ); ?>"><?php _e( 'Linkedin URL', 'genesisawesome' ) ?></label></th>
-				<td><input type="text" name="<?php echo $this->get_field_name( 'linkedin_url' ); ?>" id="<?php echo $this->get_field_id( 'linkedin_url' ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'linkedin_url' ) ); ?>" class="widefat" /></td>
-			</tr>
-			<tr valign="top">
-				<th scope="row"><label for="<?php echo $this->get_field_id( 'googleplus_url' ); ?>"><?php _e( 'Google Plus URL', 'genesisawesome' ) ?></label></th>
-				<td><input type="text" name="<?php echo $this->get_field_name( 'googleplus_url' ); ?>" id="<?php echo $this->get_field_id( 'googleplus_url' ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'googleplus_url' ) ); ?>" class="widefat" /></td>
-			</tr>
-			<tr valign="top">
-				<th scope="row"><label for="<?php echo $this->get_field_id( 'stumbleupon_url' ); ?>"><?php _e( 'Stumbleupon URL', 'genesisawesome' ) ?></label></th>
-				<td><input type="text" name="<?php echo $this->get_field_name( 'stumbleupon_url' ); ?>" id="<?php echo $this->get_field_id( 'stumbleupon_url' ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'stumbleupon_url' ) ); ?>" class="widefat" /></td>
-			</tr>
-			<tr valign="top">
-				<th scope="row"><label for="<?php echo $this->get_field_id( 'pinterest_url' ); ?>"><?php _e( 'Pinterest URL', 'genesisawesome' ) ?></label></th>
-				<td><input type="text" name="<?php echo $this->get_field_name( 'pinterest_url' ); ?>" id="<?php echo $this->get_field_id( 'pinterest_url' ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'pinterest_url' ) ); ?>" class="widefat" /></td>
-			</tr>
+			<?php
+			foreach ( $socials as $social_option => $social_name ) {
+				?>
+				<tr valign="top">
+					<th scope="row"><label for="<?php echo $this->get_field_id( $social_option ); ?>"><?php echo esc_html( $social_name ) ?> URL</label></th>
+					<td><input type="text" name="<?php echo $this->get_field_name( $social_option ); ?>" id="<?php echo $this->get_field_id( $social_option ); ?>" value="<?php echo esc_attr( $this->get_field_value( $social_option ) ); ?>" class="widefat" /></td>
+				</tr>
+				<?php
+			}
+			?>
 		</table>
 		<p class="description">
 			<?php _e( 'Leave fields as blank to hide the icon/link', 'genesisawesome' ); ?>
@@ -345,7 +306,7 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 
 	/**
 	 * Home page slider settings box
-	 * 
+	 *
 	 * @return null
 	 */
 	function homepage_slider_settings() {
@@ -374,7 +335,7 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 
 	/**
 	 * Contact Page Settings Box
-	 * 
+	 *
 	 * @return null
 	 */
 	function contact_page_settings() {
@@ -414,7 +375,7 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 
 	/**
 	 * Typography Settings box
-	 * 
+	 *
 	 * @return null
 	 */
 	function typography_settings() {
@@ -451,22 +412,54 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 	}
 
 	/**
+	 * Child Theme Information
+	 *
+	 * @return null
+	 */
+	function childtheme_info() {
+
+		?>
+		<table cellpadding="4">
+			<tr>
+				<td><?php _e( 'Theme Name', 'genesisawesome' );?></td>
+				<td><a href="<?php echo esc_url( CHILD_THEME_URL ); ?>" target="_blank"><?php esc_html_e( CHILD_THEME_NAME ); ?></a></td>
+			</tr>
+			<tr>
+				<td><?php _e( 'Theme Version', 'genesisawesome' );?></td>
+				<td><?php echo esc_html( CHILD_THEME_VERSION ); ?></td>
+			</tr>
+			<tr>
+				<td><?php _e( 'Author', 'genesisawesome' );?></td>
+				<td> <a href="http://www.genesisawesome.com/" target="_blank">GenesisAwesome</a></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<p><a href="http://www.genesisawesome.com/donate/" title="Donate" target="_blank"> <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt=""> </a></p>
+					<p>Your Donation will be used to further development of free genesis child themes.</p>
+				</td>
+			</tr>
+		</table>
+		<?php
+
+	}
+
+	/**
 	 * Select field for Taxonomy
-	 * 
+	 *
 	 * @since 1.0
-	 * 
+	 *
 	 * @param  string $option_name Name of the Option
-	 * @param  string $taxonomy    Name of the Taxonomy 
+	 * @param  string $taxonomy    Name of the Taxonomy
 	 * @return string              Select field HTML for Taxonomy
 	 */
 	function ga_get_categories( $option_name, $taxonomy = 'category' ) {
-		
+
 		$args = array(
 			'taxonomy' => $taxonomy
 		);
 
 		$cats = get_categories( $args );
-		
+
 		$field_html = '<select name="' . $this->get_field_name( $option_name ) . '" id="' . $this->get_field_id( $option_name ) . '">';
 		foreach ( $cats as $cat ) {
 			$field_html .= '<option value="' . $cat->term_id . '"' . selected( $cat->term_id, $this->get_field_value( $option_name ), false ) . '>' . $cat->name . '</option>';
@@ -479,7 +472,7 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 
 	/**
 	 * Add action to load styles and scripts
-	 * 
+	 *
 	 * @return null
 	 */
 	function ga_load_scripts() {
@@ -490,20 +483,20 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 
 	/**
 	 * Load styles and scripts for Option page.
-	 * 
+	 *
 	 * @return null
 	 */
 	function ga_scripts() {
 
-		wp_enqueue_style( 'ga-colorpicker', CHILD_URL . '/lib/css/jquery.miniColors.css' );
-		wp_enqueue_script( 'ga-colorpicker', CHILD_URL . '/lib/scripts/jquery.miniColors.min.js', array( 'jquery' ), null, true );
-		wp_enqueue_script( 'ga-custom', CHILD_URL . '/lib/scripts/ga-custom.js', array( 'ga-colorpicker' ), null, true );
+		wp_enqueue_style( 'ga-colorpicker', CHILD_URL . '/css/jquery.minicolors.css', null, null );
+		wp_enqueue_script( 'ga-colorpicker', CHILD_URL . '/js/jquery.miniColors.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'ga-custom', CHILD_URL . '/js/ga-custom.js', array( 'ga-colorpicker' ), null, true );
 
 	}
 
 	/**
 	 * Options table for typography
-	 * 
+	 *
 	 * @param  string $option Options name
 	 * @return null
 	 */
@@ -511,10 +504,6 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 
 		?>
 		<table>
-			<tr valign="top">
-				<td><label for="<?php echo $this->get_field_id( 'enable_' . $option . '_typography' ); ?>"><?php _e( 'Enable ?', 'genesisawesome' );?></label></td>
-				<td> <input type="checkbox" name="<?php echo $this->get_field_name( 'enable_' . $option . '_typography' ); ?>" id="<?php echo $this->get_field_id( 'enable_' . $option . '_typography' ); ?>" value="1"<?php checked( '1', $this->get_field_value( 'enable_' . $option . '_typography' ) ); ?>  /></td>
-			</tr>
 			<tr valign="top">
 				<td><label for="<?php echo $this->get_field_id( $option . '_font_size' ); ?>"><?php _e( 'Font Size:', 'genesisawesome' );?></label></td>
 				<td> <input type="text" name="<?php echo $this->get_field_name( $option . '_font_size' ); ?>" id="<?php echo $this->get_field_id( $option . '_font_size' ); ?>" value="<?php echo esc_attr( $this->get_field_value( $option . '_font_size' ) ); ?>" size="4" /> px</td>
