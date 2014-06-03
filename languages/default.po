@@ -2,141 +2,62 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Greetings GenesisAwesome Child Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-03 21:57+0530\n"
-"PO-Revision-Date: 2013-01-03 21:57+0530\n"
-"Last-Translator: \n"
-"Language-Team: Harish Dasari <harishdasari@genesisawesome.com>\n"
-"Language: English\n"
+"POT-Creation-Date: 2014-06-04 01:13+0530\n"
+"PO-Revision-Date: 2014-06-04 01:13+0530\n"
+"Last-Translator: Harish Dasari <harishdasari@outlook.com>\n"
+"Language-Team: Harish Dasari <harishdasari@outlook.com>\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _e;__;esc_html__;esc_attr__;esc_html_e;esc_attr_e\n"
 "X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../functions.php:56
+#: ../functions.php:39
 msgid "Primary Navigation"
 msgstr ""
 
-#: ../functions.php:305
-msgid "Rss Feeds"
-msgstr ""
-
-#: ../functions.php:306
-msgid "Facebook"
-msgstr ""
-
-#: ../functions.php:307
-msgid "Twitter"
-msgstr ""
-
-#: ../functions.php:308
-msgid "LinkedIn"
-msgstr ""
-
-#: ../functions.php:309
-msgid "Pinterest"
-msgstr ""
-
-#: ../functions.php:310
-msgid "Stumbleupon"
-msgstr ""
-
-#: ../functions.php:311
-msgid "Google Plus"
-msgstr ""
-
-#: ../functions.php:359
+#: ../functions.php:272
 msgid "Read More"
 msgstr ""
 
-#: ../functions.php:379
-msgid "Copyright"
-msgstr ""
-
-#: ../functions.php:379
+#: ../functions.php:292
 msgid "on"
 msgstr ""
 
-#: ../functions.php:418
+#: ../functions.php:335
 msgid "Subscribe to Our Blog Updates!"
 msgstr ""
 
-#: ../functions.php:419
+#: ../functions.php:336
 msgid "Subscribe to Our Free Email Updates!"
 msgstr ""
 
-#: ../functions.php:424
+#: ../functions.php:341
 msgid "Subscribe"
 msgstr ""
 
-#: ../functions.php:431
+#: ../functions.php:350
 msgid "Share this article!"
 msgstr ""
 
-#: ../functions.php:458
+#: ../functions.php:374
 msgid "Related Posts"
 msgstr ""
 
-#: ../functions.php:517
+#: ../functions.php:432
 msgid "No Related Posts!"
 msgstr ""
 
-#: ../functions.php:566
+#: ../functions.php:480
 msgid "Greetings Child Theme Settings"
 msgstr ""
 
-#: ../functions.php:600
+#: ../functions.php:514
 msgid "Posted by"
-msgstr ""
-
-#: ../page-contact.php:75
-msgid "NO NAME"
-msgstr ""
-
-#: ../page-contact.php:76
-msgid "NO SUBJECT"
-msgstr ""
-
-#: ../page-contact.php:78
-msgid "NO MESSAGE"
-msgstr ""
-
-#: ../page-contact.php:121
-msgid "Success!. Your mail is Sent!"
-msgstr ""
-
-#: ../page-contact.php:123
-msgid "Sorry!. Failed to sent the Mail!"
-msgstr ""
-
-#: ../page-contact.php:140
-msgid "Name"
-msgstr ""
-
-#: ../page-contact.php:144
-msgid "Subject"
-msgstr ""
-
-#: ../page-contact.php:148
-msgid "Email"
-msgstr ""
-
-#: ../page-contact.php:152
-msgid "Message"
-msgstr ""
-
-#: ../page-contact.php:164
-msgid "Verification"
-msgstr ""
-
-#: ../page-contact.php:169
-msgid "Send"
-msgstr ""
-
-#: ../page-contact.php:172
-msgid "* indicates required"
 msgstr ""
 
 #: ../lib/genesisawesome-settings.php:29
@@ -167,156 +88,116 @@ msgstr ""
 msgid "Error saving settings."
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:215
-msgid "Theme Information"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:216
+#: ../lib/genesisawesome-settings.php:214
 msgid "General Settings"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:217
+#: ../lib/genesisawesome-settings.php:215
 msgid "Social Settings"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:218
+#: ../lib/genesisawesome-settings.php:216
 msgid "Homepage Slider Settings"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:219
+#: ../lib/genesisawesome-settings.php:217
 msgid "Contact Page Settings"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:220
+#: ../lib/genesisawesome-settings.php:218
 msgid "Typography Settings"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:234
-msgid "Theme Name"
+#: ../lib/genesisawesome-settings.php:219
+msgid "Theme Information"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:238
-msgid "Theme Version"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:242
-msgid "Author"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:266
+#: ../lib/genesisawesome-settings.php:233
 msgid "Custom Logo URL"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:270
+#: ../lib/genesisawesome-settings.php:237
 msgid "Logo Width"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:274
+#: ../lib/genesisawesome-settings.php:241
 msgid "Logo Height"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:278
+#: ../lib/genesisawesome-settings.php:245
 msgid "Enable Post Social Share ?"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:282
+#: ../lib/genesisawesome-settings.php:249
 msgid "Enable Post Subscribe box ?"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:286
+#: ../lib/genesisawesome-settings.php:253
 msgid "Enable Related Posts ?"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:290
+#: ../lib/genesisawesome-settings.php:257
 msgid "Feedburner ID"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:294
+#: ../lib/genesisawesome-settings.php:261
 msgid "Footer Left Text"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:311
-msgid "Rss Feed URL"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:315
-msgid "Facebook URL"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:319
-msgid "Twitter URL"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:323
-msgid "Linkedin URL"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:327
-msgid "Google Plus URL"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:331
-msgid "Stumbleupon URL"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:335
-msgid "Pinterest URL"
-msgstr ""
-
-#: ../lib/genesisawesome-settings.php:340
+#: ../lib/genesisawesome-settings.php:301
 msgid "Leave fields as blank to hide the icon/link"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:356
+#: ../lib/genesisawesome-settings.php:317
 msgid "Enable the Homepage Slider"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:360
+#: ../lib/genesisawesome-settings.php:321
 msgid "Homepage Slider Category"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:364
+#: ../lib/genesisawesome-settings.php:325
 msgid "Number of Slides ?"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:369
+#: ../lib/genesisawesome-settings.php:330
 msgid ""
 "Slider will use Featuted image in post. So please set the Featured Image."
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:385
+#: ../lib/genesisawesome-settings.php:346
 msgid "Contact Email"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:389
+#: ../lib/genesisawesome-settings.php:350
 msgid "reCaptcha Public Key"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:393
+#: ../lib/genesisawesome-settings.php:354
 msgid "reCaptcha Private Key"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:397
+#: ../lib/genesisawesome-settings.php:358
 msgid "reCaptcha Color Theme"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:400
+#: ../lib/genesisawesome-settings.php:361
 msgid "Red"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:401
+#: ../lib/genesisawesome-settings.php:362
 msgid "White"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:402
+#: ../lib/genesisawesome-settings.php:363
 msgid "Blackglass"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:403
+#: ../lib/genesisawesome-settings.php:364
 msgid "Clean"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:409
+#: ../lib/genesisawesome-settings.php:370
 msgid ""
 "reCaptcha is free captch service from Google to prevent the Email Spams. <br/"
 ">To get reCaptcha public key and private key please visit <a href=\"https://"
@@ -324,47 +205,55 @@ msgid ""
 "site</a>"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:425
+#: ../lib/genesisawesome-settings.php:386
 msgid "Body"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:429
+#: ../lib/genesisawesome-settings.php:390
 msgid "H1 Heading Typography"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:433
+#: ../lib/genesisawesome-settings.php:394
 msgid "H2 Heading Typography"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:437
+#: ../lib/genesisawesome-settings.php:398
 msgid "H3 Heading Typography"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:441
+#: ../lib/genesisawesome-settings.php:402
 msgid "H4 Heading Typography"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:445
+#: ../lib/genesisawesome-settings.php:406
 msgid "H5 Heading Typography"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:515
-msgid "Enable ?"
+#: ../lib/genesisawesome-settings.php:424
+msgid "Theme Name"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:519
+#: ../lib/genesisawesome-settings.php:428
+msgid "Theme Version"
+msgstr ""
+
+#: ../lib/genesisawesome-settings.php:432
+msgid "Author"
+msgstr ""
+
+#: ../lib/genesisawesome-settings.php:508
 msgid "Font Size:"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:523
+#: ../lib/genesisawesome-settings.php:512
 msgid "Font Color:"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:527
+#: ../lib/genesisawesome-settings.php:516
 msgid "Link Color:"
 msgstr ""
 
-#: ../lib/genesisawesome-settings.php:531
+#: ../lib/genesisawesome-settings.php:520
 msgid "Link Hover Color:"
 msgstr ""
 
@@ -483,4 +372,52 @@ msgstr ""
 
 #: ../lib/widgets/widget-flickr.php:129
 msgid "Large"
+msgstr ""
+
+#: ../page-contact.php:75
+msgid "NO NAME"
+msgstr ""
+
+#: ../page-contact.php:76
+msgid "NO SUBJECT"
+msgstr ""
+
+#: ../page-contact.php:78
+msgid "NO MESSAGE"
+msgstr ""
+
+#: ../page-contact.php:121
+msgid "Success!. Your mail is Sent!"
+msgstr ""
+
+#: ../page-contact.php:123
+msgid "Sorry!. Failed to sent the Mail!"
+msgstr ""
+
+#: ../page-contact.php:140
+msgid "Name"
+msgstr ""
+
+#: ../page-contact.php:144
+msgid "Subject"
+msgstr ""
+
+#: ../page-contact.php:148
+msgid "Email"
+msgstr ""
+
+#: ../page-contact.php:152
+msgid "Message"
+msgstr ""
+
+#: ../page-contact.php:164
+msgid "Verification"
+msgstr ""
+
+#: ../page-contact.php:169
+msgid "Send"
+msgstr ""
+
+#: ../page-contact.php:171
+msgid "* indicates required"
 msgstr ""

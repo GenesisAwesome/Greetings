@@ -273,15 +273,15 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 	function social_settings() {
 
 		$socials = array(
-			'twitter_url'     => __( 'Twitter', 'genesisawesome' ),
-			'facebook_url'    => __( 'Facebook', 'genesisawesome' ),
-			'linkedin_url'    => __( 'LinkedIn', 'genesisawesome' ),
-			'pinterest_url'   => __( 'Pinterest', 'genesisawesome' ),
-			'googleplus_url'  => __( 'Google Plus', 'genesisawesome' ),
-			'instagram_url'   => __( 'Instagram', 'genesisawesome' ),
-			'youtube_url'     => __( 'Youtube', 'genesisawesome' ),
-			'stumbleupon_url' => __( 'Stumbleupon', 'genesisawesome' ),
-			'flickr_url'      => __( 'Flickr', 'genesisawesome' ),
+			'twitter_url'     => 'Twitter',
+			'facebook_url'    => 'Facebook',
+			'linkedin_url'    => 'LinkedIn',
+			'pinterest_url'   => 'Pinterest',
+			'googleplus_url'  => 'Google Plus',
+			'instagram_url'   => 'Instagram',
+			'youtube_url'     => 'Youtube',
+			'stumbleupon_url' => 'Stumbleupon',
+			'flickr_url'      => 'Flickr',
 		);
 
 		?>
@@ -489,7 +489,7 @@ class GenesisAwesome_Childtheme_Settings extends Genesis_Admin_Boxes {
 	function ga_scripts() {
 
 		wp_enqueue_style( 'ga-colorpicker', CHILD_URL . '/css/jquery.minicolors.css', null, null );
-		wp_enqueue_script( 'ga-colorpicker', CHILD_URL . '/js/jquery.miniColors.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'ga-colorpicker', CHILD_URL . '/js/jquery.minicolors.min.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'ga-custom', CHILD_URL . '/js/ga-custom.js', array( 'ga-colorpicker' ), null, true );
 
 	}

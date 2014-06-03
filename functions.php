@@ -17,7 +17,7 @@
  */
 define( 'CHILD_THEME_NAME', 'Greetings' );
 define( 'CHILD_THEME_URL', 'http://www.genesisawesome.com/themes/greetings-genesis-child-theme/' );
-define( 'CHILD_THEME_VERSION', '1.1' );
+define( 'CHILD_THEME_VERSION', '1.1.1' );
 define( 'GA_CHILDTHEME_FIELD', 'genesisawesome_greetings_settings' );
 
 require_once( get_template_directory() . '/lib/init.php' );
@@ -231,15 +231,15 @@ function genesisawesome_do_header_right() {
 	echo get_search_form();
 
 	$socials = array(
-		'twitter_url'     => __( 'Twitter', 'genesisawesome' ),
-		'facebook_url'    => __( 'Facebook', 'genesisawesome' ),
-		'linkedin_url'    => __( 'LinkedIn', 'genesisawesome' ),
-		'pinterest_url'   => __( 'Pinterest', 'genesisawesome' ),
-		'googleplus_url'  => __( 'Google Plus', 'genesisawesome' ),
-		'instagram_url'   => __( 'Instagram', 'genesisawesome' ),
-		'youtube_url'     => __( 'Youtube', 'genesisawesome' ),
-		'stumbleupon_url' => __( 'Stumbleupon', 'genesisawesome' ),
-		'flickr_url'      => __( 'Flickr', 'genesisawesome' ),
+		'twitter_url'     => 'Twitter',
+		'facebook_url'    => 'Facebook',
+		'linkedin_url'    => 'LinkedIn',
+		'pinterest_url'   => 'Pinterest',
+		'googleplus_url'  => 'Google Plus',
+		'instagram_url'   => 'Instagram',
+		'youtube_url'     => 'Youtube',
+		'stumbleupon_url' => 'Stumbleupon',
+		'flickr_url'      => 'Flickr',
 	);
 
 	echo '<ul class="greetings-socials">';
